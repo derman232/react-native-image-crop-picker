@@ -524,6 +524,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
 
     private void startCropping(Activity activity, Uri uri) {
         UCrop.Options options = new UCrop.Options();
+        options.setFreeStyleCropEnabled(true);
         options.setCompressionFormat(Bitmap.CompressFormat.JPEG);
         options.setCircleDimmedLayer(cropperCircleOverlay);
         configureCropperColors(options);
